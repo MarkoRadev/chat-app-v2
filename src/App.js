@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Messages from './components/Messages';
+import Messages from './components/Messages/Messages';
+import MessageInput from './components/MessageInput/MessageInput';
 
 function App() {
     const [messages, setMessages] = useState([{
@@ -14,9 +15,15 @@ function App() {
             },
         },  
     }]);
+
     const [me, setMe] = useState({
-        username: randomName(),
-        color: randomColor(),
+        // username: randomName(),
+        // color: randomColor(),
+        id: '2',
+        clientData: {
+            color: randomColor(),
+            username: randomName(),
+        },
     });
 
     function randomName() {
@@ -52,10 +59,19 @@ function App() {
         return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
     }
 
+    function onSendMessage(message) {
+        const newMessage = {
+          data: message,
+          member: me
+        }
+        setMessages([...messages, newMessage])
+    }
+
     return (
         <div className="app">
             <div className="app-content">
                 <Messages messages={messages} me={me} />
+                <MessageInput onSendMessage={onSendMessage} />
             </div>
         </div>
     );

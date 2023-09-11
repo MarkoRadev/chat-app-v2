@@ -1,5 +1,4 @@
 import {useEffect, useRef} from 'react';
-import React from 'react';
 
 function Messages({messages, me}) {
     const bottomRef = useRef(null);
@@ -16,7 +15,7 @@ function Messages({messages, me}) {
         const className = messageFromMe ? "messages-message current-member" : "messages-message";
 
         return (
-            <li key={id} className={className}>
+            <li key={data} className={className}>
                 <span
                     className="avatar"
                     style={{backgroundColor: color}}
