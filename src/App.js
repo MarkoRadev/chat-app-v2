@@ -2,8 +2,27 @@ import { useState } from 'react';
 import './App.css';
 import Messages from './components/Messages/Messages';
 import MessageInput from './components/MessageInput/MessageInput';
+import Members from './components/Members/Members';
 
 function App() {
+    const [me, setMe] = useState({
+        // username: randomName(),
+        // color: randomColor(),
+        id: '2',
+        clientData: {
+            color: randomColor(),
+            username: randomName(),
+        },
+    });
+
+    const [members, setMembers] = useState([{
+        id: "1",
+        clientData: {
+          color: 'blue',
+          username: 'bluemoon',
+        },
+    }])
+
     const [messages, setMessages] = useState([{
         id: '1',
         data: 'This is a test message!',
@@ -15,16 +34,6 @@ function App() {
             },
         },  
     }]);
-
-    const [me, setMe] = useState({
-        // username: randomName(),
-        // color: randomColor(),
-        id: '2',
-        clientData: {
-            color: randomColor(),
-            username: randomName(),
-        },
-    });
 
     function randomName() {
         const adjectives = [
@@ -70,6 +79,7 @@ function App() {
     return (
         <div className="app">
             <div className="app-content">
+                <Members members={members} me={me}/>
                 <Messages messages={messages} me={me} />
                 <MessageInput onSendMessage={onSendMessage} />
             </div>
