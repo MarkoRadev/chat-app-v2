@@ -29,6 +29,6 @@ function MessageInput({ onSendMessage }) {
             </form>
         </div>
     );
-}
+};
 
 export default MessageInput;

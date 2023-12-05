@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import './App.css';
 import Messages from '../../components/Messages/Messages';
 import MessageInput from '../../components/MessageInput/MessageInput';
 import Members from '../../components/Members/Members';
@@ -42,7 +41,7 @@ function randomColor() {
     return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
-function App() {
+function Chat() {
     const [messages, setMessages] = useState([]);
     const [members, setMembers] = useState([]);
     const [me, setMe] = useState({
@@ -155,4 +154,4 @@ function App() {
     );
 }
 
-export default App;
+export default Chat;

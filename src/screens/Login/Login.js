@@ -1,9 +1,7 @@
-import App from "../Chat/App";
-
 function Login() {
     return (
         <div>
-            <App />
+            Login screen
         </div>
     );
 };
