@@ -1,0 +1,9 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(99,99,191,.07);
+}
+
+/* button {
+    display: block;
+} */

@@ -1,3 +1,4 @@
+import './MessageInput.css';
 import { useEffect, useState } from 'react';
 
 function MessageInput({ onSendMessage }) {
@@ -6,16 +7,16 @@ function MessageInput({ onSendMessage }) {
     function onChange(e) {
         const text = e.target.value;
         setText(text);
-    }
+    };
 
     function onSubmit(e) {
         e.preventDefault();
         onSendMessage(text);
         setText('');
-    }
+    };
 
     return (
-        <div className="input">
+        <div>
             <form onSubmit={e => onSubmit(e)}>
                 <input
                     name="message"

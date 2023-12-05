@@ -5,13 +5,13 @@ import Chat from './screens/Chat/Chat';
 
 function App() {
     const [userName, setUserName] = useState('');
-    const [enterChatRoom, setEnterChatRoom] = useState(true);
+    const [enterChatRoom, setEnterChatRoom] = useState(false);
 
     return (
         <div>
             {enterChatRoom ? 
                 <Chat />
-                : <Login />
+                : <Login enterChat={() => setEnterChatRoom(true)} />
             }
         </div>
     );
