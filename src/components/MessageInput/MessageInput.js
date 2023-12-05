@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function MessageInput({onSendMessage}) {
+function MessageInput({ onSendMessage }) {
     const [text, setText] = useState('');
 
     function onChange(e) {

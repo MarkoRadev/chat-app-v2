@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
-import Messages from './components/Messages/Messages';
-import MessageInput from './components/MessageInput/MessageInput';
-import Members from './components/Members/Members';
+import Messages from '../../components/Messages/Messages';
+import MessageInput from '../../components/MessageInput/MessageInput';
+import Members from '../../components/Members/Members';
 
 // Channel ID: tpYFcdWOaiMUU6ug
 // Secret Key: 2Uc3MHSFmeg0H85xYHegfzkTPO5WcQuV
@@ -49,6 +49,8 @@ function App() {
         username: randomName(),
         color: randomColor(),
     });
+
+    console.log("App rendered")
 
     // const [me, setMe] = useState({
     //     // username: randomName(),
@@ -124,6 +126,7 @@ function App() {
     }
 
     useEffect(() => {
+        console.log("Use effect: connect to Scaledrone!")
         if (drone === null) {
             connectToScaledrone();
         }
