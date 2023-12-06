@@ -17,8 +17,9 @@ function MessageInput({ onSendMessage }) {
 
     return (
         <div>
-            <form onSubmit={e => onSubmit(e)}>
+            <form className="mi-form" onSubmit={e => onSubmit(e)}>
                 <input
+                    className="message-input"
                     name="message"
                     onChange={e => onChange(e)}
                     value={text}
@@ -26,7 +27,7 @@ function MessageInput({ onSendMessage }) {
                     placeholder='Enter your message and press ENTER'
                     autoFocus
                 />
-                <button>Send</button>
+                <button className="mi-button">Send</button>
             </form>
         </div>
     );
