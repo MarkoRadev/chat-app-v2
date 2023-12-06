@@ -1,3 +1,4 @@
+import './Messages.css';
 import {useEffect, useRef} from 'react';
 
 function Messages({messages, me}) {

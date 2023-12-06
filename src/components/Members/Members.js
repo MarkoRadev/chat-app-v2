@@ -1,3 +1,5 @@
+import './Members.css';
+
 function Members({members, me}) {
     function Member({id, clientData}, isMe) {
         const {username, color} = clientData

@@ -1,0 +1,39 @@
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.member > .avatar {
+    margin-right: 5px;
+    height: 24px;
+    width: 24px;
+}
+
+.username {
+    color: gray;
+    font-size: 14px;
+}
+
+.members {
+    border-bottom: solid #6363bf1c;
+    background: white;
+    padding: 8px;
+}
+
+.members-count {
+    margin-bottom: 8px;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.members-list > .member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 8px;
+}
