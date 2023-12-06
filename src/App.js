@@ -4,14 +4,18 @@ import Login from "./screens/Login/Login";
 import Chat from './screens/Chat/Chat';
 
 function App() {
-    const [userName, setUserName] = useState('');
+    const [username, setUsername] = useState('');
     const [enterChatRoom, setEnterChatRoom] = useState(false);
+
+    function handleUsernameChange(text) {
+        setUsername(text);
+    };
 
     return (
         <div>
             {enterChatRoom ? 
-                <Chat />
-                : <Login enterChat={() => setEnterChatRoom(true)} />
+                <Chat username={username} />
+                : <Login handleUsernameChange={handleUsernameChange} enterChat={() => setEnterChatRoom(true)} />
             }
         </div>
     );
