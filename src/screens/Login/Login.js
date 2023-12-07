@@ -1,14 +1,15 @@
 import './Login.css';
 import { useState } from 'react';
 
-function Login({ handleUsernameChange, enterChat }) {
+function Login({ handleUsernameChange, handleColorChange, enterChat }) {
     const [username, setUsername] = useState('');
-    const [selectedColor, setSelectedColor] = useState('#000000');
+    const [selectedColor, setSelectedColor] = useState('');
 
-    console.log("Selected color: " + selectedColor);
+    // console.log("Selected color: " + selectedColor, typeof(selectedColor));
 
     function handleChatClick() {
         handleUsernameChange(username);
+        handleColorChange(selectedColor);
         enterChat();
     };
 

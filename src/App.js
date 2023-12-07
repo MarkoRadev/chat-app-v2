@@ -5,17 +5,26 @@ import Chat from './screens/Chat/Chat';
 
 function App() {
     const [username, setUsername] = useState('');
+    const [userColor, setUserColor] = useState('');
     const [enterChatRoom, setEnterChatRoom] = useState(false);
 
     function handleUsernameChange(text) {
         setUsername(text);
     };
 
+    function handleColorChange(color) {
+        setUserColor(color);
+    };
+
     return (
         <div>
             {enterChatRoom ? 
-                <Chat username={username} />
-                : <Login handleUsernameChange={handleUsernameChange} enterChat={() => setEnterChatRoom(true)} />
+                <Chat username={username} userColor={userColor} />
+                : <Login 
+                    handleUsernameChange={handleUsernameChange}
+                    handleColorChange={handleColorChange} 
+                    enterChat={() => setEnterChatRoom(true)} 
+                />
             }
         </div>
     );

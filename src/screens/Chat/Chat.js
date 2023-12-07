@@ -42,12 +42,12 @@ function randomColor() {
     return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
-function Chat({ username }) {
+function Chat({ username, userColor }) {
     const [messages, setMessages] = useState([]);
     const [members, setMembers] = useState([]);
     const [me, setMe] = useState({
         username: username === '' ? randomName() : username,
-        color: randomColor(),
+        color: userColor === '' ? randomColor() : userColor,
     });
 
     console.log("App rendered");
