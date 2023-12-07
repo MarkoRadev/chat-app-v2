@@ -1,8 +1,8 @@
 import './Members.css';
 
-function Members({members, me}) {
-    function Member({id, clientData}, isMe) {
-        const {username, color} = clientData
+function Members({ members, me }) {
+    function Member({ id, clientData }, isMe) {
+        const { username, color } = clientData
 
         return (
             <div key={id} className="member">

@@ -1,7 +1,7 @@
 import './Messages.css';
-import {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 
-function Messages({messages, me}) {
+function Messages({ messages, me }) {
     const bottomRef = useRef(null);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ function Messages({messages, me}) {
         }
     });
 
-    function Message({member, data, id}, me) {
+    function Message({ member, data, id }, me) {
         const {username, color} = member.clientData;
         const messageFromMe = member.id === me.id;
         const className = messageFromMe ? "messages-message current-member" : "messages-message";

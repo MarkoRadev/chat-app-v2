@@ -47,7 +47,7 @@ function Chat({ username, userColor }) {
     const [members, setMembers] = useState([]);
     const [me, setMe] = useState({
         username: username === '' ? randomName() : username,
-        color: userColor === '' ? randomColor() : userColor,
+        color: userColor === '#000000' ? randomColor() : userColor,
     });
 
     console.log("App rendered");
@@ -146,8 +146,8 @@ function Chat({ username, userColor }) {
     }
 
     return (
-        <div className="app">
-            <div className="app-content">
+        <div className="chat">
+            <div className="chat-content">
                 <Members members={members} me={me}/>
                 <Messages messages={messages} me={me} />
                 <MessageInput onSendMessage={onSendMessage} />

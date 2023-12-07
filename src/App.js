@@ -5,7 +5,7 @@ import Chat from './screens/Chat/Chat';
 
 function App() {
     const [username, setUsername] = useState('');
-    const [userColor, setUserColor] = useState('');
+    const [userColor, setUserColor] = useState('#000000');
     const [enterChatRoom, setEnterChatRoom] = useState(false);
 
     function handleUsernameChange(text) {
