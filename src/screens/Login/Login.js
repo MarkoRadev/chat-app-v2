@@ -15,25 +15,50 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
 
     return (
         <div className="login">
-            <input 
-                type="text" 
-                className="username-input"
-                placeholder='Username'
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-            />
-            <input
-                type="color"
-                className="color-picker"
-                value={selectedColor}
-                onChange={e => setSelectedColor(e.target.value)}
-            />
-            <div>
+            <div className="login-input">
+                <input 
+                    type="text" 
+                    className="username-input"
+                    placeholder='Username'
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
+                />
+                <input
+                    type="color"
+                    className="color-picker"
+                    value={selectedColor}
+                    onChange={e => setSelectedColor(e.target.value)}
+                />
+            </div>
+            {/* <div>
                 Username: {username === '' ? "random" : username}
             </div>
             <div>
                 Color: {selectedColor === '#000000' ? "random" : selectedColor}
-            </div>
+            </div> */}
+
+            <table>
+                <tbody>
+                    <tr style={{display: username === '' ? "table-row" : "none"}}>
+                        <td>
+                            Username:
+                        </td>
+                        <td className={username === '' ? "random-name" : "user-name"}>
+                            {/* {username === '' ? "random generated" : username} */}
+                            random
+                        </td>
+                    </tr>
+                    <tr style={{display: selectedColor === '#000000' ? "table-row" : "none"}}>
+                        <td>
+                            Color:
+                        </td>
+                        <td className="random-name">
+                            {/* {selectedColor === '#000000' ? "random" : selectedColor} */}
+                            random
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <button onClick={handleChatClick}>CHAT</button>
         </div>
     );
