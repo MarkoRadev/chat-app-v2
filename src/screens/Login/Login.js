@@ -43,7 +43,7 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
                         <td>
                             Username:
                         </td>
-                        <td className={username === '' ? "random-name" : "user-name"}>
+                        <td className="random-name">
                             {/* {username === '' ? "random generated" : username} */}
                             random
                         </td>
@@ -59,7 +59,10 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
                     </tr>
                 </tbody>
             </table>
-            <button onClick={handleChatClick}>CHAT</button>
+
+            <button className="login-button" onClick={handleChatClick}>
+                CHAT
+            </button>
         </div>
     );
 };

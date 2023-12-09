@@ -15,7 +15,7 @@
 
 .username-input {
     font-size: 16px;
-    border: 1px solid #003cb3;
+    border: 1px solid #0066cc;
     outline: none;
     padding: 1px 20px;
     border-radius: 10px;
@@ -74,6 +74,17 @@ tr td:first-child {
 
 .user-name {
     /* font-weight: bold; */
+}
+
+.login-button {
+    padding: 12px 14px;
+    font-size: 14px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 /* button {
