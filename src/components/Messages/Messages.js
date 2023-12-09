@@ -16,7 +16,7 @@ function Messages({ messages, me }) {
         const className = messageFromMe ? "messages-message current-member" : "messages-message";
 
         return (
-            <li key={data} className={className}>
+            <li key={id} className={className}>
                 <span
                     className="avatar"
                     style={{backgroundColor: color}}

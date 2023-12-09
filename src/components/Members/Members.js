@@ -2,14 +2,16 @@ import './Members.css';
 
 function Members({ members, me }) {
     function Member({ id, clientData }, isMe) {
-        const { username, color } = clientData
+        const { username, color } = clientData;
 
         return (
             <div key={id} className="member">
                 <div className="avatar" style={{backgroundColor: color}}/>
-                <div className="username">{username} {isMe ? ' (you)' : ''}</div>
+                <div className="username">
+                    {username} {isMe ? ' (you)' : ''}
+                </div>
             </div>
-        )
+        );
     }
 
     return (
@@ -21,7 +23,7 @@ function Members({ members, me }) {
                 {members.map(m => Member(m, m.id === me.id))}
             </div>
         </div>
-    )
+    );
 }
 
 export default Members;

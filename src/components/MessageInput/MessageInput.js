@@ -7,13 +7,13 @@ function MessageInput({ onSendMessage }) {
     function onChange(e) {
         const text = e.target.value;
         setText(text);
-    };
+    }
 
     function onSubmit(e) {
         e.preventDefault();
         onSendMessage(text);
         setText('');
-    };
+    }
 
     return (
         <div>
@@ -31,6 +31,6 @@ function MessageInput({ onSendMessage }) {
             </form>
         </div>
     );
-};
+}
 
 export default MessageInput;

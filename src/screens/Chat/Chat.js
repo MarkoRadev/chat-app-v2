@@ -50,39 +50,6 @@ function Chat({ username, userColor }) {
         color: userColor === '#000000' ? randomColor() : userColor,
     });
 
-    console.log("App rendered");
-    console.log(Math.floor(Math.random() * 0xFFFFFF));
-
-    // const [me, setMe] = useState({
-    //     // username: randomName(),
-    //     // color: randomColor(),
-    //     id: '2',
-    //     clientData: {
-    //         color: randomColor(),
-    //         username: randomName(),
-    //     },
-    // });
-
-    // const [members, setMembers] = useState([{
-    //     id: "1",
-    //     clientData: {
-    //       color: 'blue',
-    //       username: 'bluemoon',
-    //     },
-    // }])
-
-    // const [messages, setMessages] = useState([{
-    //     id: '1',
-    //     data: 'This is a test message!',
-    //     member: {
-    //         id: '1',
-    //         clientData: {
-    //             color: 'blue',
-    //             username: 'bluemoon',
-    //         },
-    //     },  
-    // }]);
-
     const meRef = useRef();
     meRef.current = me;
 
@@ -108,7 +75,6 @@ function Chat({ username, userColor }) {
         const room = drone.subscribe('observable-room');
 
         room.on('message', message => {
-            const {data, member} = message;
             setMessages([...messagesRef.current, message]);
         });
 
@@ -127,7 +93,6 @@ function Chat({ username, userColor }) {
     }
 
     useEffect(() => {
-        console.log("Use effect: connect to Scaledrone!")
         if (drone === null) {
             connectToScaledrone();
         }
@@ -138,11 +103,6 @@ function Chat({ username, userColor }) {
             room: 'observable-room',
             message
         });
-        // const newMessage = {
-        //     data: message,
-        //     member: me
-        // }
-        // setMessages([...messages, newMessage])
     }
 
     return (

@@ -5,13 +5,11 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
     const [username, setUsername] = useState('');
     const [selectedColor, setSelectedColor] = useState('#000000');
 
-    // console.log("Selected color: " + selectedColor, typeof(selectedColor));
-
     function handleChatClick() {
         handleUsernameChange(username);
         handleColorChange(selectedColor);
         enterChat();
-    };
+    }
 
     return (
         <div className="login">
@@ -30,12 +28,6 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
                     onChange={e => setSelectedColor(e.target.value)}
                 />
             </div>
-            {/* <div>
-                Username: {username === '' ? "random" : username}
-            </div>
-            <div>
-                Color: {selectedColor === '#000000' ? "random" : selectedColor}
-            </div> */}
 
             <table>
                 <tbody>
@@ -44,7 +36,6 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
                             Username:
                         </td>
                         <td className="random-name">
-                            {/* {username === '' ? "random generated" : username} */}
                             random
                         </td>
                     </tr>
@@ -53,7 +44,6 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
                             Color:
                         </td>
                         <td className="random-name">
-                            {/* {selectedColor === '#000000' ? "random" : selectedColor} */}
                             random
                         </td>
                     </tr>
@@ -65,6 +55,6 @@ function Login({ handleUsernameChange, handleColorChange, enterChat }) {
             </button>
         </div>
     );
-};
+}
 
 export default Login;
