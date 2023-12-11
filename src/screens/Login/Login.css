@@ -8,7 +8,6 @@
 
 .login-input {
     display: flex;
-    /* background-color: red; */
     height: 60px;
     align-items: center;
 }
@@ -19,9 +18,7 @@
     outline: none;
     padding: 1px 20px;
     border-radius: 10px;
-    /* box-shadow: 1px 1px 2px rgba(0, 68, 204, 0.5); */
     height: 75%;
-    /* background-color: rgba(99,99,191,.07); */
 }
 
 .color-picker {
@@ -47,14 +44,8 @@
 }
 
 table {
-    /* background-color: red; */
-    /* width: 300px; */
     font-size: 15px;
     margin-top: 10px;
-}
-
-table, th, td {
-    /* border: 1px solid black; */
 }
 
 td {
@@ -65,15 +56,10 @@ tr td:first-child {
     text-align: right;
     font-weight: bold;
     padding-right: 5px;
-    /* width: 70px; */
 }
 
 .random-name {
     color: grey;
-}
-
-.user-name {
-    /* font-weight: bold; */
 }
 
 .login-button {
@@ -86,7 +72,3 @@ tr td:first-child {
     cursor: pointer;
     margin-top: 10px;
 }
-
-/* button {
-    display: block;
-} */

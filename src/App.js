@@ -17,7 +17,7 @@ function App() {
     };
 
     return (
-        <div>
+        <div className="App">
             {enterChatRoom ? 
                 <Chat username={username} userColor={userColor} />
                 : <Login 
